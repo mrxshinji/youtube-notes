@@ -47,12 +47,14 @@ const Session = new mongoose.model("session", sessionSchema)
 
 // --------------------- MONGO --------------------------
 
-
+// send data
 app.get("/api", async (req, res) => {
     const items = await Session.find().sort({_id: -1}).exec()
     res.send(items)
 })
 
+
+// add session
 app.post("/add", async (req, res) => {
     const newSession = new Session({
         session: req.body.sessionName,
@@ -73,6 +75,8 @@ app.post("/add", async (req, res) => {
     })
 })
 
+
+// add note
 app.post("/add/note", async (req, res) => {
     const receive = req.body
     const newNote = new Note({
@@ -97,10 +101,10 @@ app.post("/add/note", async (req, res) => {
             });
         }
     })
-
-    
 })
 
+
+// delete session
 app.post("/delete", async (req, res) => {
     const reqId = req.body;
     await Session.deleteOne({_id: reqId.id}, (err) => {
@@ -114,6 +118,8 @@ app.post("/delete", async (req, res) => {
       }).clone()
 })
 
+
+// delete note
 app.post("/delete/note", async (req, res) => {
     const {sessionId, noteId} = req.body;
     await Session.updateOne({_id: sessionId}, {
@@ -131,6 +137,8 @@ app.post("/delete/note", async (req, res) => {
     }).clone()
 })
 
+
+// update note
 app.post("/update/note", async (req, res) => {
     const {title, body, time, _id, sessionId} = req.body
     console.log(req.body)
@@ -155,6 +163,8 @@ app.post("/update/note", async (req, res) => {
     }).clone()
 });
 
+
+// port listen
 app.listen(3001, function() {
     console.log("Server started on port 3001");
   })
