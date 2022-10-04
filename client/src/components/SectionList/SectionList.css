@@ -1,0 +1,126 @@
+@import url(../../App.css);
+
+/* NAV */
+.section-list {
+    padding-top: 20%;
+    
+}
+
+.section-bar {
+    width: 90%;
+    align-self: flex-start;
+    
+}
+
+.section-menu {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:.5rem;
+}
+
+.section-item {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    transition: all 0.5s;
+}
+
+.section-item li button{
+    font-size: 20px;
+    font-family: var(--text);
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: start;
+}
+
+.section-item li.active button{
+    font-size: 24px;
+    font-family: var(--text);
+    color: var(--text2C);
+    align-self: flex-start;
+}
+
+.delete-session {
+    align-self: flex-end;
+    width: 40px;
+    border: 2px solid var(--bgBlack);
+    background-color: var(--button);
+    height: 20px;
+    border-radius: 10px;
+}
+
+.delete-session:hover {
+    filter: opacity(0.5);
+}
+
+.minus {
+    width: 20px;
+    height: 3px;
+    background-color: var(--text2C);
+}
+
+
+/* Session Add */
+.new-session {
+    z-index: 2;
+    position: absolute;
+    bottom: 5%;
+    width: 90%;
+    background-color: var(--border);
+    border-radius: 25px;
+    padding: 5%;
+    transition: all 0.5s;
+}
+
+#add-session {
+    background: none;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.add {
+    position: relative;
+    border: 6px solid var(--text2C);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+.add::before {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 3px;
+    background-color: var(--text2C);
+    transition: 0.5s;
+}
+
+.add::after {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 3px;
+    background-color: var(--text2C);
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
+.add.active::before {
+    transform: rotate(225deg);
+    transition: 0.5s;
+}
+
+.add.active::after{
+    transform: rotate(315deg);
+    transition: 0.5s;
+}
+
+.new-session form {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+}
+

@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Outfit:wght@400;600&display=swap');
+
+:root {
+  --text: 'Outfit', sans-serif;
+  --ButtonText: 'Barlow Condensed', sans-serif;
+  --bgBlue: #288389;
+  --border: #39B3C4;
+  --text1C: #202424;
+  --text2C: #fff;
+  --bgBlack: rgba(43, 51, 52, 0.8);
+  --button: #C4399B;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-family: var(--text);
+}
+
+head {
+  display: none;
+}
+
+body,
+#root {
+  background-color: black;
+  min-width: 1440px;
+  min-height: 900px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  height: 90%;
+  width: 95%;
+}
+
+.bg {
+  background-color: var(--bgBlue);
+  border: 4px solid var(--border);
+  position: relative;
+}
+
+header {
+  height: 100%;
+  width: 24%;
+  margin-right: 3%;
+}
+
+.section-list {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  width: 73%;
+  height: 100%;
+}
+
+.video {
+  width: 100%;
+  height: 51%;
+  margin-bottom: 3%;
+}
+
+.note {
+  width: 67%;
+  height: 45%;
+  margin-right: 3%;
+}
+
+.note-list {
+  width: 30%;
+  height: 45%;
+}
+
+input {
+  width: 100%;
+  background-color: var(--bgBlack);
+  padding-left: 5%;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type="text"] {
+  border-radius: 20px;
+  color: var(--text2C);
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: var(--border);
+  font-size: 15px;
+}
+
+button:hover,
+input:hover {
+  filter: brightness(1.5);
+}
+
+
+.add-btn {
+  border-radius: 20px;
+  color: var(--text2C);
+  font-size: 20px;
+  width: 60%;
+  align-self: center;
+  padding: 2%;
+  background-color: var(--button);
+}
+
+button:disabled,
+input[type="submit"]:disabled {
+  filter: opacity(0.2);
+}

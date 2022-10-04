@@ -1,0 +1,97 @@
+@import url(../../App.css);
+
+/* Note Area */
+.note-area {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    gap:1rem;
+}
+
+.note-title {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.note-area hr {
+    width: 100%;
+}
+
+
+/* Form */
+.note .note-form {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2%;
+}
+
+.note-form .note-title {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.note-title input {
+    width: 40%;
+}
+
+.note-title input::placeholder {
+    font-size: 20px;
+}
+
+.note-title button {
+    width: auto;
+    padding: 4px 5%;
+}
+
+.btns {
+    width: 40%;
+    gap: 5px;
+}
+
+.btns button {
+    flex: 1;
+    padding: 4px 5%;
+}
+
+textarea {
+    width: 100%;
+    height: 80%;
+    background-color: var(--bgBlack);
+    padding-left: 5%;
+    cursor: pointer;
+    color: var(--text2C);
+}
+
+textarea::placeholder {
+    font-size: 20px;
+}
+
+.noteList-menu {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    align-items: flex-start;
+    justify-content: space-around;
+    align-content: flex-start;
+    gap: 6px;
+}
+
+.noteList-menu li {
+    flex: 5;
+}
+
+.noteList-menu li button {
+    
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: var(--button);
+    color: var(--text2C);
+}
